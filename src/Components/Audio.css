@@ -1,0 +1,50 @@
+#AudioPlayer{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 40%;
+    height: 80%;
+    background: #ffe0e5;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+#album-cover{
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+
+#song-title{
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    
+}
+
+#song-artist{
+    font-size: 14px;
+    color: #333;
+
+}
+
+#track-progress{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+
+#track-progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+}
+
