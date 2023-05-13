@@ -1,31 +1,77 @@
+nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+}
+
+.circle{
+    margin: 0;
+    margin-top: 0%;
+    height: 30px;
+    width: 30px;
+    background: white;
+    color: black;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+    border-radius: 50%;
+    align-content: center;
+    padding: 2px 2px 2px 2px;
+    line-height: 30px;
+}
+
 #AudioPlayer{
     position: absolute;
     top: 10%;
     left: 5%;
     width: 40%;
-    height: 80%;
+    height: 85%;
     background: #ffe0e5;
-    padding: 25px 35px;
-    text-align: center;
+    padding: 15px 25px;padding: 15px 25px;
+    gap: 0;
 }
 
 #album-cover{
     border-radius: 50%;
-    border: 8px solid #fff;
-    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+    height: 60%;
+    width: 71%;
+    margin: 0;
+    padding: 0;
+    border: 7px solid #fff;
+    box-shadow: 0 5px 20px rgba(255, 26, 26, 0.22);
+}
+
+.art{
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #song-title{
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
     color: #333;
-    
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
 }
 
 #song-artist{
     font-size: 14px;
     color: #333;
-
+    margin: 0;
+    padding: 0;
 }
 
 #track-progress{
@@ -35,7 +81,31 @@
     background: black;
     border-radius: 4px;
     cursor: pointer;
-    margin: 40px 0;
+    margin: 10px 0;
+}
+#track-volume{
+    -webkit-appearance: none;
+    width: 60%;
+    height: 6px;
+    background: red;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#track-volume::-webkit-meter-bar{
+    -webkit-appearance: none;
+    background: black;
+    width: 60%;
+    height: 6px;
+}
+
+#track-volume::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
 }
 
 #track-progress::-webkit-slider-thumb{
@@ -48,3 +118,40 @@
     box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
 }
 
+#controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls div{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f53192;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+#controls div:nth-child(2){
+    transform: scale(1.2);
+    color: #fff;
+    background: #f53192;
+}
+
+#vol{
+    margin-left: 20%;
+    margin-top: 3px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#showVol{
+    color: black;
+}

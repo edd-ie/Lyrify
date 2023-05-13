@@ -1,0 +1,13 @@
+#lyrics{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    border: 1px solid black;
+    height: 85%;
+    width: 40%;
+    overflow-y: scroll;
+}
+
+#lyrics::-webkit-scrollbar{
+    width: 5px;
+}
