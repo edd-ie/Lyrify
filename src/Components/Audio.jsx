@@ -41,6 +41,7 @@ export default function AudioPlayer({musicData}) {
         }
     }
 
+
     function handleTrack(e){
         audio.currentTime = e.target.value
 
@@ -53,6 +54,7 @@ export default function AudioPlayer({musicData}) {
         }
         
     }
+
 
     function handleVol(e){
         audio.volume = e.target.value/100;
@@ -82,6 +84,11 @@ export default function AudioPlayer({musicData}) {
         }
     }
 
+    function view(e){
+        console.log("View",e.target.value) 
+    }
+
+
     return (
         <div id="AudioPlayer">
             <nav>
@@ -96,10 +103,10 @@ export default function AudioPlayer({musicData}) {
                 alt="album cover" id="album-cover" />
 
             <h1 id="song-title">{musicData[0]}</h1>
-            <p id="song-artist">{musicData[1]}</p>
+            <p id="song-artist"  value={musicData[1]} onChange={view}>{musicData[1]}</p>
 
             <audio id="audio">
-                <source src={String(musicData[3])} type="audio/mpeg" />
+                <source src={musicData[musicData.length - 1]} type="audio/mpeg" />
             </audio>
 
             <input type="range" min={0} max={100} defaultValue={0} onChange={handleTrack} id="track-progress" />
